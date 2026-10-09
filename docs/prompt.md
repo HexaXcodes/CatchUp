@@ -6,12 +6,12 @@ This development record is not application configuration. It preserves all entri
 
 Do not add credentials, tokens, private conversation exports, or personal contact details. Append future entries in Markdown. Historical references to `prompt.env` describe the filename used at that time; the current log is `prompt.md`.
 
-## Full prompt files
 
-- [Original Stitch design prompt](frontend/STITCH_PROMPT.md)
-- [Original Gemini integration context](frontend/GEMINI_CONTEXT.md)
-- [Phase-two implementation prompt](PHASE2_GEMINI_PROMPT.md)
-- [Phase-two Stitch pages prompt](PHASE2_STITCH_PROMPT.md)
+
+
+
+
+
 
 ## Preserved entries
 

@@ -63,10 +63,10 @@ CatchUp supports managed passwordless email sign-in via Supabase Auth (magic lin
 - `backend/src/core/parser.ts`: bounded, source-preserving import with ambiguous-date checks.
 - `backend/src/core/profile.ts`: validated preferences with user-scoped and guest-scoped browser persistence.
 - `backend/src/core/brief.ts`: local model contract, bounded input, output validation, evidence references and deterministic excerpt fallback.
-- `backend/src/ai/`: WebLLM worker adapter. Default model: Qwen2.5 3B Instruct (about 2.5 GB VRAM estimate). See `TESTING.md` for validation limits.
+- `backend/src/ai/`: WebLLM worker adapter. Default model: Qwen2.5 3B Instruct (about 2.5 GB VRAM estimate). See `docs/TESTING.md` for validation limits.
 - `frontend/src/auth.ts`: Supabase Auth client integration, session state management, URL allowlist validator, and initials derivation.
 - `frontend/src/app.ts`: SPA client router, auth listener, UI state controller, local inference runner, source navigation, cancellation, and session cleanup.
-- `frontend/src/shell.ts` & `stitch.css`: integrated Stitch Phase 2 layout, responsive components, accessible controls, and reduced-motion support.
+- `frontend/src/shell.ts` & `stitch.css`: integrated Stitch Phase 2 layout with a cinematic visual refresh (custom SVG C mark, feature ticker, forest/amber palette), responsive components, accessible controls, and reduced-motion support.
 - `backend/server/health.mjs`: public Render health/version metadata only. No chat endpoint or database.
 
 ---
@@ -77,7 +77,7 @@ CatchUp supports managed passwordless email sign-in via Supabase Auth (magic lin
 - **Model Cache**: Model downloads contact external artifact hosts and cache weights in IndexedDB (~420 MB). Model weights remain cached after clearing a chat; they can be purged via the Privacy page.
 - **Clear Session**: Removes chat/results references from the DOM, terminates the AI worker, and nullifies memory addresses. It does not perform physical hardware DRAM shredding or delete the original `.txt` export on disk.
 - **Output Validation**: AI output validation checks structure, known source IDs, and exact deadline excerpts. It does not establish semantic truth; AI output requires human verification against cited sources.
-- **Audit Log**: `prompt.md` is an audit log of prompt history, NOT runtime secrets. It never contains real credentials, tokens, or private chat contents.
+- **Audit Log**: `docs/prompt.md` is an audit log of prompt history, NOT runtime secrets. It never contains real credentials, tokens, or private chat contents.
 
 ---
 
